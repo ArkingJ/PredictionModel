@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Match Predictions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <i class="fas fa-futbol"></i>
+                    Premier League Predictions
+                </h1>
+                <p class="subtitle">AI-powered match outcome predictions using machine learning</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="total-matches">0</h3>
+                        <p>Upcoming Matches</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="last-updated">-</h3>
+                        <p>Last Updated</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="avg-confidence">-</h3>
+                        <p>Avg Confidence</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="predictions-section">
+                <div class="section-header">
+                    <h2>Match Predictions & Results</h2>
+                    <div class="filters">
+                        <select id="match-type-filter" class="filter-select">
+                            <option value="all">All Matches</option>
+                            <option value="upcoming">Upcoming Matches</option>
+                            <option value="recent">Recent Results</option>
+                        </select>
+                        <select id="outcome-filter" class="filter-select">
+                            <option value="all">All Outcomes</option>
+                            <option value="H">Home Win</option>
+                            <option value="D">Draw</option>
+                            <option value="A">Away Win</option>
+                        </select>
+                        <select id="confidence-filter" class="filter-select">
+                            <option value="all">All Confidence</option>
+                            <option value="high">High (>70%)</option>
+                            <option value="medium">Medium (50-70%)</option>
+                            <option value="low">Low (<50%)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Loading predictions...</p>
+                </div>
+
+                <div class="predictions-container" id="predictions-container" style="display: none;">
+                    <div class="predictions-grid" id="predictions-grid">
+                        <!-- Predictions will be populated here -->
+                    </div>
+                </div>
+
+                <div class="no-predictions" id="no-predictions" style="display: none;">
+                    <div class="no-data">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h3>No Predictions Available</h3>
+                        <p>There are no upcoming matches to predict at the moment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-card">
+                    <h3><i class="fas fa-info-circle"></i> How It Works</h3>
+                    <p>Our machine learning model analyzes historical Premier League data including team form, head-to-head records, and performance metrics to predict match outcomes.</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-chart-bar"></i> Prediction Confidence</h3>
+                    <p>The confidence score indicates how certain the model is about its prediction. Higher confidence doesn't guarantee accuracy but suggests the model has strong indicators.</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Disclaimer</h3>
+                    <p>These predictions are for informational purposes only. Please do not use them for gambling decisions. Football is unpredictable and past performance doesn't guarantee future results.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Premier League Predictions. Powered by Machine Learning.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
