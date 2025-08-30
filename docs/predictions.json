@@ -1,65 +1,95 @@
 [
   {
-    "fixture_id": 1234567,
-    "date": "2025-01-25T20:00:00Z",
-    "home_team": "Arsenal",
+    "fixture_id": 1001,
+    "date": "2025-09-06T15:00:00Z",
+    "home_team": "Manchester City",
+    "away_team": "Arsenal",
+    "predictions": {
+      "home_win": 0.52,
+      "draw": 0.28,
+      "away_win": 0.20
+    },
+    "predicted_outcome": "H",
+    "confidence": 0.52,
+    "match_type": "upcoming"
+  },
+  {
+    "fixture_id": 1002,
+    "date": "2025-09-06T17:30:00Z",
+    "home_team": "Liverpool",
     "away_team": "Chelsea",
     "predictions": {
-      "home_win": 0.4523,
-      "draw": 0.2876,
-      "away_win": 0.2601
+      "home_win": 0.45,
+      "draw": 0.30,
+      "away_win": 0.25
     },
     "predicted_outcome": "H",
-    "confidence": 0.4523,
+    "confidence": 0.45,
     "match_type": "upcoming"
   },
   {
-    "fixture_id": 1234568,
-    "date": "2025-01-26T15:00:00Z",
-    "home_team": "Manchester City",
-    "away_team": "Liverpool",
-    "predictions": {
-      "home_win": 0.5234,
-      "draw": 0.2567,
-      "away_win": 0.2199
-    },
-    "predicted_outcome": "H",
-    "confidence": 0.5234,
-    "match_type": "upcoming"
-  },
-  {
-    "fixture_id": 1234569,
-    "date": "2025-01-20T14:00:00Z",
+    "fixture_id": 1003,
+    "date": "2025-09-07T14:00:00Z",
     "home_team": "Manchester United",
     "away_team": "Tottenham",
     "predictions": {
-      "home_win": 0.3891,
-      "draw": 0.3123,
-      "away_win": 0.2986
+      "home_win": 0.38,
+      "draw": 0.32,
+      "away_win": 0.30
     },
     "predicted_outcome": "H",
-    "confidence": 0.3891,
-    "match_type": "recent",
-    "actual_result": "D",
-    "goals_home": 2,
-    "goals_away": 2
+    "confidence": 0.38,
+    "match_type": "upcoming"
   },
   {
-    "fixture_id": 1234570,
-    "date": "2025-01-19T16:30:00Z",
+    "fixture_id": 1004,
+    "date": "2025-08-23T15:00:00Z",
     "home_team": "Newcastle",
-    "away_team": "Brighton",
+    "away_team": "Aston Villa",
     "predictions": {
-      "home_win": 0.4123,
-      "draw": 0.2987,
-      "away_win": 0.2890
+      "home_win": 0.42,
+      "draw": 0.31,
+      "away_win": 0.27
     },
     "predicted_outcome": "H",
-    "confidence": 0.4123,
+    "confidence": 0.42,
     "match_type": "recent",
     "actual_result": "H",
-    "goals_home": 3,
+    "goals_home": 2,
     "goals_away": 1
+  },
+  {
+    "fixture_id": 1005,
+    "date": "2025-08-24T14:00:00Z",
+    "home_team": "Brighton",
+    "away_team": "West Ham",
+    "predictions": {
+      "home_win": 0.35,
+      "draw": 0.35,
+      "away_win": 0.30
+    },
+    "predicted_outcome": "D",
+    "confidence": 0.35,
+    "match_type": "recent",
+    "actual_result": "D",
+    "goals_home": 1,
+    "goals_away": 1
+  },
+  {
+    "fixture_id": 1006,
+    "date": "2025-08-25T16:30:00Z",
+    "home_team": "Brentford",
+    "away_team": "Crystal Palace",
+    "predictions": {
+      "home_win": 0.40,
+      "draw": 0.33,
+      "away_win": 0.27
+    },
+    "predicted_outcome": "H",
+    "confidence": 0.40,
+    "match_type": "recent",
+    "actual_result": "A",
+    "goals_home": 0,
+    "goals_away": 2
   }
 ]
-

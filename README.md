@@ -2,6 +2,12 @@
 
 A comprehensive machine learning system that predicts the probability of football match outcomes (1X2) for the English Premier League, with an automated web deployment. The model lacks real time APIs with access to ongoing and future fixtures and the therefore can only use past matches. To turn it into an accurate model use APIs with access to real-time fixtures.
 
+## 🌐 Live Demo
+
+**🔗 [View Live Demo](https://arkingj.github.io/PredictionModel/)**
+
+Experience the prediction system in action with real-time updates and interactive features.
+
 ## 🚀 Features
 
 - **Machine Learning Models**: Logistic Regression and XGBoost for match outcome prediction

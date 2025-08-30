@@ -41,12 +41,17 @@ jobs:
           echo "::set-output name=has-predictions::false"
         fi
         
+    - name: Copy predictions to docs folder
+      if: steps.check-changes.outputs.has-predictions == 'true'
+      run: |
+        cp predictions.json docs/predictions.json
+        
     - name: Commit and push if changes exist
       if: steps.check-changes.outputs.has-predictions == 'true'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add predictions.json
+        git add predictions.json docs/predictions.json
         git diff --quiet && git diff --staged --quiet || git commit -m "Update football predictions [skip ci]"
         git push
         
