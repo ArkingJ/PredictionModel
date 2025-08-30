@@ -33,7 +33,7 @@ jobs:
     - name: Check if predictions were updated
       id: check-changes
       run: |
-        if [ -f "docs/predictions.json" ]; then
+        if [ -f "predictions.json" ]; then
           echo "Predictions file exists"
           echo "::set-output name=has-predictions::true"
         else
@@ -46,7 +46,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add docs/predictions.json
+        git add predictions.json
         git diff --quiet && git diff --staged --quiet || git commit -m "Update football predictions [skip ci]"
         git push
         

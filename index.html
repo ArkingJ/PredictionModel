@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Match Predictions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">⚽ Premier League Match Predictions</h1>
+            <p class="subtitle">AI-powered predictions for upcoming matches and recent results</p>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search teams...">
+            </div>
+            <div class="filter-controls">
+                <select id="matchTypeFilter">
+                    <option value="all">All Matches</option>
+                    <option value="upcoming">Upcoming Matches</option>
+                    <option value="recent">Recent Results</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-number" id="totalMatches">0</span>
+                <span class="stat-label">Total Matches</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="upcomingMatches">0</span>
+                <span class="stat-label">Upcoming</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="recentMatches">0</span>
+                <span class="stat-label">Recent</span>
+            </div>
+        </div>
+
+        <div class="predictions-container">
+            <div id="loadingMessage" class="loading">
+                <div class="spinner"></div>
+                <p>Loading predictions...</p>
+            </div>
+            <div id="predictionsGrid" class="predictions-grid"></div>
+            <div id="noResults" class="no-results" style="display: none;">
+                <p>No matches found matching your criteria.</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Predictions updated automatically every Thursday at 12 PM UTC</p>
+            <p>Data powered by API-Football.com</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

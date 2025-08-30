@@ -8,8 +8,8 @@ from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings('ignore')
 
-# Configuration - Set reference date to a realistic date from current season
-REFERENCE_DATE = datetime(2024, 12, 20)  # Friday, December 20, 2024 (current season)
+# Configuration - Set reference date to current date
+REFERENCE_DATE = datetime(2025, 8, 30)  # Saturday, August 30, 2025 (current season)
 
 # API Configuration
 API_FOOTBALL_KEY = os.getenv('API_FOOTBALL_KEY', "3ef3b021a60101225b5691fbff2a6679")
@@ -41,7 +41,7 @@ def get_real_fixtures(league_id):
     url = f"{BASE_URL}/fixtures"
     params = {
         'league': league_id,
-        'season': 2024  # Current season
+        'season': 2025  # Current season 2025/2026
     }
     
     response = requests.get(url, headers=headers, params=params)
@@ -51,7 +51,7 @@ def get_real_fixtures(league_id):
     
     data = response.json()
     fixtures = data['response']
-    print(f"Found {len(fixtures)} fixtures for season 2024")
+    print(f"Found {len(fixtures)} fixtures for season 2025")
     
     # Separate upcoming and recent fixtures based on reference date
     upcoming_fixtures = []
@@ -143,10 +143,8 @@ def create_predictions_from_real_fixtures(upcoming_fixtures, recent_fixtures):
     return all_predictions
 
 def save_predictions(predictions):
-    """Save predictions to JSON file in docs folder"""
-    os.makedirs('docs', exist_ok=True)
-    
-    output_file = 'docs/predictions.json'
+    """Save predictions to JSON file in root folder"""
+    output_file = 'predictions.json'
     with open(output_file, 'w') as f:
         json.dump(predictions, f, indent=2)
     
@@ -212,5 +210,4 @@ def main():
     return predictions
 
 if __name__ == "__main__":
-    predictions = main()
-e 
+    predictions = main() 
